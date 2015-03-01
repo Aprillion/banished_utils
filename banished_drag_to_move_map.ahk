@@ -1,14 +1,15 @@
-; converts right mouse button drag movement into pressing WASD keys (to simulate terrain movement by mouse drag)
+; convert right mouse button drag movement into pressing WASD keys
 #IfWinActive Banished
 #SingleInstance Force
 #Persistent
 CoordMode Mouse Screen
 
-; these 2 values need tweaking according to your resolution, processor speed, ...
+; these values need tweaking according to your resolution, processor speed, ...
 sleep_time = 12 ; ms
-was_moved_during_sleep = 12 ; px
+x_moved_during_sleep = 12 ; px
+y_moved_during_sleep = 11 ; px
 
-; starts a loop when dragging is started, WASD keys are held down until there is no difference in position
+; start a loop when dragging is started, holding down WASD keys until there is no difference in position
 *~RButton::
     dragged := 1
     x_moved := 0
@@ -17,40 +18,40 @@ was_moved_during_sleep = 12 ; px
     Loop
     {
         Sleep %sleep_time%
-        if not dragged
-            break
         MouseGetPos x1, y1
         x := x1 - x0 + x_moved
         y := y1 - y0 + y_moved
-        ;Tooltip % "x" . x . "y" . y . " x_moved" . x_moved . "y_moved" . y_moved
-        if x < -%was_moved_during_sleep%
+        ; Tooltip % "x" . x . "y" . y . " x_moved" . x_moved . "y_moved" . y_moved
+        if x < -%x_moved_during_sleep%
         {
             SendInput {d down}
-            x_moved := x_moved + was_moved_during_sleep
+            x_moved += x_moved_during_sleep
         } else {
             SendInput {d up}
         }
-        if x > %was_moved_during_sleep%
+        if x > %x_moved_during_sleep%
         {
             SendInput {a down}
-            x_moved := x_moved - was_moved_during_sleep
+            x_moved -= x_moved_during_sleep
         } else {
             SendInput {a up}
         }
-        if y < -%was_moved_during_sleep%
+        if y < -%y_moved_during_sleep%
         {
             SendInput {s down}
-            y_moved := y_moved + was_moved_during_sleep
+            y_moved += y_moved_during_sleep
         } else {
             SendInput {s up}
         }
-        if y > %was_moved_during_sleep%
+        if y > %y_moved_during_sleep%
         {
             SendInput {w down}
-            y_moved := y_moved - was_moved_during_sleep
+            y_moved -= y_moved_during_sleep
         } else {
             SendInput {w up}
         }
+        if not dragged
+            break
     }
     SendInput {a up}
     SendInput {d up}
@@ -58,7 +59,7 @@ was_moved_during_sleep = 12 ; px
     SendInput {w up}
 Return
 
-; stops the loop when right mouse button is released
+; stop the loop when right mouse button is released
 *~RButton Up::
     dragged := 0
 Return
