@@ -1,4 +1,4 @@
-; convert right mouse button drag movement into pressing WASD keys
+; converts right mouse button drag movement into pressing WASD keys (to simulate terrain movement by mouse drag)
 #IfWinActive Banished
 #SingleInstance Force
 #Persistent
@@ -8,7 +8,7 @@ CoordMode Mouse Screen
 sleep_time = 12 ; ms
 was_moved_during_sleep = 12 ; px
 
-; start a loop when dragging is started, holding down WASD keys until there is no difference in position
+; starts a loop when dragging is started, WASD keys are held down until there is no difference in position
 *~RButton::
     dragged := 1
     x_moved := 0
@@ -58,7 +58,7 @@ was_moved_during_sleep = 12 ; px
     SendInput {w up}
 Return
 
-; stop the loop when right mouse button is released
+; stops the loop when right mouse button is released
 *~RButton Up::
     dragged := 0
 Return
