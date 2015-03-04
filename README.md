@@ -15,8 +15,10 @@ Utilities and scripts for improving gameplay in [Banished](http://www.shiningroc
 * download the [banished_improved_camera_control.ahk](https://raw.githubusercontent.com/Aprillion/banished_utils/master/banished_improved_camera_control.ahk) file (e.g. right click on the link > `Save Link As...`)
 * execute (double click) the downloaded *.ahk file
 * inside the game, try to drag the map with right mouse button across a large portion of the screen
- * if the map moves too slowly, decrease `x_moved_during_sleep` and `y_moved_during_sleep` variables
- * if the map moves too quickly, increase `x_moved_during_sleep` and `y_moved_during_sleep` variables
+ * if the map has been moved too little, decrease `x_moved_during_sleep` and `y_moved_during_sleep` variables
+ * if the map has been moved too far, increase `x_moved_during_sleep` and `y_moved_during_sleep` variables
  * if you want to drag the map with left button instead of right, replace BOTH occurences of <br> `RButton` to `LButton`
  * make other adjustments as needed
 * after SAVING your changes, you will have to `Reload This Script` from the context menu of the AHK notification icon on the Windows task-bar
+
+If you experience any troubles, please create a new [Issue](https://github.com/Aprillion/banished_utils/issues), post in the [original forum discussion](http://shiningrocksoftware.com/forum/discussion/comment/27250#Comment_27250) or [contact me](https://github.com/Aprillion).
