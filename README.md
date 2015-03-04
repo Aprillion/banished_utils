@@ -1,9 +1,12 @@
 # banished_utils
-Utilities and scripts for improving gameplay in Banished
+Utilities and scripts for improving gameplay in Banished (http://www.shiningrocksoftware.com/game/).
 
-## [banished_drag_to_move_map.ahk](banished_drag_to_move_map.ahk)
-[AutoHotkey](http://en.wikipedia.org/wiki/AutoHotkey) script that converts mouse right-button drag movements into appropriate `W` `A` `S` `D` key presses.
+## [banished_improved_camera_control.ahk](banished_improved_camera_control.ahk)
+![banished_zoom](https://cloud.githubusercontent.com/assets/1087670/6482850/e5f6331e-c26a-11e4-8fa0-305ae30d6563.jpg)
 
-E.g. when you drag the map to the right, `A` key is pressed, so the same object stays under your mouse pointer (more or less).
+[AutoHotkey](http://en.wikipedia.org/wiki/AutoHotkey) script to improve camera / main map control in fullscreen mode.
 
-The simulation is not perfect and tweaking of the variables is needed for optimal performance on different systems (the default values work on my computer).
+* drag terrain with right mouse button (like on google maps)
+* zoom towards screen edges with mouse wheel
+* tilt camera with middle mouse button
+
