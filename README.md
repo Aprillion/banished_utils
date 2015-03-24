@@ -17,8 +17,17 @@ Utilities and scripts for improving gameplay in [Banished](http://www.shiningroc
 * inside the game, try to drag the map with right mouse button across a large portion of the screen
  * if the map has been moved too little, decrease `x_moved_during_sleep` and `y_moved_during_sleep` variables
  * if the map has been moved too far, increase `x_moved_during_sleep` and `y_moved_during_sleep` variables
- * if you want to drag the map with left button instead of right, replace BOTH occurences of <br> `RButton` to `LButton`
+ * if you want to drag the map with left button instead of right, replace BOTH occurrences of <br> `RButton` to `LButton`
  * make other adjustments as needed
 * after SAVING your changes, you will have to `Reload This Script` from the context menu of the AHK notification icon on the Windows task-bar
 
 If you experience any troubles, please create a new [Issue](https://github.com/Aprillion/banished_utils/issues), post in the [original forum discussion](http://shiningrocksoftware.com/forum/discussion/comment/27250#Comment_27250) or [contact me](https://github.com/Aprillion).
+
+# Cities: Skylines utils
+
+The game [Cities: Skylines](http://www.citiesskylines.com) extensively supports modding, so creating a new mod is the correct way to implement new features. However, until such a camera mod exists, I adapted my Banished AHK script as a temporary workaround:
+
+## [cities_skylines_improved_camera_control.ahk](cities_skylines_improved_camera_control.ahk)
+
+* Same usage as above, except that CS natively supports camera tilt with middle mouse button.
+
