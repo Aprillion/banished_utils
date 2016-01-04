@@ -15,6 +15,8 @@
 Return
 
 ; also relese W when S or W are pressed manually (i.e. stop auto running)
+; no need for SendInput {w up} when W itself is pressed,
+; but we need to set w := 0 after either S or W are pressed (=> no Return after ~s::)
 ~s::
   SendInput {w up}
 ~w::
