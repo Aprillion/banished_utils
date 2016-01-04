@@ -31,3 +31,8 @@ The game [Cities: Skylines](http://www.citiesskylines.com) extensively supports 
 
 * Same usage as above, except that CS natively supports camera tilt with middle mouse button.
 
+
+# Other AutoHotkey utils
+
+* [toggle_w.ahk](toggle_w.ahk) - for games missing auto-run key binding
+* [forward_jump.ahk](forward_jump.ahk) - for games where it's impossible for us clumsies to jump preciselly to small platforms without falling
