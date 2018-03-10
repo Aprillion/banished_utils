@@ -35,4 +35,5 @@ The game [Cities: Skylines](http://www.citiesskylines.com) extensively supports 
 # Other AutoHotkey utils
 
 * [toggle_w.ahk](toggle_w.ahk) - for games missing auto-run key binding
-* [forward_jump.ahk](forward_jump.ahk) - for games where it's impossible for us clumsies to jump preciselly to small platforms without falling
+* [forward_jump.ahk](forward_jump.ahk) - jump precisely between small platforms without falling
+* [edge_scrolling.ahk](edge_scrolling.ahk) - add edge scrolling to games that only support keyboard (ASDW) movement (like [Factorio](http://factorio.com/) as of 2018-03)
